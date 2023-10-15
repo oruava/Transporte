@@ -43,13 +43,9 @@ public class Main {
                 Vehiculos bicicleta = new Vehiculos("Bicicleta",15);
                 return bicicleta;
             }
-            else{
-                System.out.println("Opcion no valida");
-                break;
-            }
         }
-        Vehiculos vacio = new Vehiculos("nada", 0);
-        return vacio;
+        Vehiculos pies = new Vehiculos("a pie", 1);
+        return pies;
     }
     public static Ubicación menuEleccionUbicacion(){
         Scanner sc = new Scanner(System.in);
@@ -77,10 +73,6 @@ public class Main {
             else if(opcion==3){
                 Ubicación concepcion = new Ubicación("Santiago",300);
                 return concepcion;
-            }
-            else{
-                System.out.println("Opcion no valida");
-                break;
             }
         }
         Ubicación vacio = new Ubicación("nada", 0);
