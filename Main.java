@@ -7,6 +7,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println(crearPersona().getNombre());
         System.out.println(menuEleccionVehiculo().getVelocidad());
+        System.out.println(menuEleccionUbicacion().getDistancia());
 
     }
     public static Persona crearPersona(){
@@ -22,7 +23,7 @@ public class Main {
         boolean condicion = true;
 
         while(condicion) {
-            System.out.println("Menú:");
+            System.out.println("Eliga el vehiculo en el cual se transportara:");
             System.out.println("1. Elegir Auto");
             System.out.println("2. Elegir Motocicleta");
             System.out.println("3. Elegir Bicicleta");
@@ -49,6 +50,41 @@ public class Main {
             }
         }
         Vehiculos vacio = new Vehiculos("nada", 0);
+        return vacio;
+    }
+    public static Ubicación menuEleccionUbicacion(){
+        Scanner sc = new Scanner(System.in);
+        int opcion;
+        boolean condicion = true;
+
+        while(condicion) {
+            System.out.println("Eliga su destino:");
+            System.out.println("1. Elegir Santiago");
+            System.out.println("2. Elegir Pucon");
+            System.out.println("3. Elegir Concepcion");
+            System.out.print("Seleccione una opción: ");
+            opcion = sc.nextInt();
+
+            if(opcion==1){
+                Ubicación santiago = new Ubicación("Santiago",680);
+                return santiago;
+
+            }
+            else if(opcion==2){
+                Ubicación pucon = new Ubicación("Pucon",100);
+                return pucon;
+
+            }
+            else if(opcion==3){
+                Ubicación concepcion = new Ubicación("Santiago",300);
+                return concepcion;
+            }
+            else{
+                System.out.println("Opcion no valida");
+                break;
+            }
+        }
+        Ubicación vacio = new Ubicación("nada", 0);
         return vacio;
     }
 }
