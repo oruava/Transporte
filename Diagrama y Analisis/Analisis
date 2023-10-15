@@ -1,0 +1,2 @@
+Realize el diagrama con 4 clases, la clase main (la encargada de interactuar con las otras clases), la clase persona (para el nombre del usuario), la clase vehiculo (para crear el vehiculo con la velocidad de este y el tipo del vehiculo) y la clase ubicacion (para saber el lugar de destino y la distancia).  
+Todas las clases creadas tienen solamente relacion con la clase main, la cual es la encargada de interactuar con estas, permitiendo al usuario ingresar su nombre, su vehiculo, su destino y saber el tiempo de demora para llegar a su ubicacion deseada
