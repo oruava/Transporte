@@ -5,9 +5,8 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println(crearPersona().getNombre());
-        System.out.println(menuEleccionVehiculo().getVelocidad());
-        System.out.println(menuEleccionUbicacion().getDistancia());
+        System.out.println("Bienvenido!");
+        calcularTiempoDeDemora(crearPersona(),menuEleccionVehiculo(),menuEleccionUbicacion());
 
     }
     public static Persona crearPersona(){
@@ -23,7 +22,7 @@ public class Main {
         boolean condicion = true;
 
         while(condicion) {
-            System.out.println("Eliga el vehiculo en el cual se transportara:");
+            System.out.println("Eliga el vehiculo en el cual se transportara: ");
             System.out.println("1. Elegir Auto");
             System.out.println("2. Elegir Motocicleta");
             System.out.println("3. Elegir Bicicleta");
@@ -86,5 +85,11 @@ public class Main {
         }
         Ubicación vacio = new Ubicación("nada", 0);
         return vacio;
+    }
+    public static float calcularTiempoDeDemora(Persona usuario, Vehiculos transporte , Ubicación ciudad){
+        float tiempo = ciudad.getDistancia() / transporte.getVelocidad();
+        System.out.println("Hola " + usuario.getNombre() + "!, el tiempo de viaje aproximado para llegar a "+ ciudad.getCiudad() +
+               " utilizando "+ transporte.getTipoDeVehiculo() + " es de: " + tiempo + " horas.");
+        return tiempo;
     }
 }
